@@ -1,0 +1,33 @@
+<!-- views/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <script src="src/components/sidebar.js"></script>
+    <script src="src/components/navbar.js"></script>
+    <script src="src/components/main.js"></script>
+    <script src="src/components/card.js"></script>
+  </div>
+
+  <script>
+    function showMain(page) {
+      const mainContent = document.getElementById('mainContent');
+      const pageTitle = document.getElementById('pageTitle');
+
+      if (page === 'Home') {
+        mainContent.innerHTML = '<p>Welcome to the Home Page!</p>';
+      } else if (page === 'Books') {
+        mainContent.innerHTML = '<div class="card"><h2>Book 1</h2><p>Description 1</p></div><div class="card"><h2>Book 2</h2><p>Description 2</p></div>';
+      }
+
+      pageTitle.innerText = page;
+    }
+  </script>
+</body>
+
